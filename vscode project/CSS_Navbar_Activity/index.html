@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            background: #f7f3f4; 
+            color: #222; 
+        } 
+        header { 
+            padding: 24px; 
+            background: maroon; 
+            color: white; 
+        } 
+        main {
+             padding: 24px;
+        } 
+
+        nav ul{
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+        }
+        .vertical-nav ul { 
+            width: 200px; 
+            background-color: #eeeeee; 
+        } 
+        .vertical-nav a { 
+            display: block; 
+            color: #222222; 
+            padding: 10px 16px; 
+            text-decoration: none; 
+        } 
+        .vertical-nav a:hover { 
+            background-color: #555555; 
+            color: white; 
+        } 
+        .vertical-nav a.active { 
+            background-color: maroon; 
+            color: white; 
+        } 
+        .active{
+            background-color: maroon;
+            color: white;
+        }
+
+         .horizontal-nav ul { 
+            display: flex; 
+            background-color: maroon; 
+        } 
+        .horizontal-nav a { 
+            display: block; 
+            color: white; 
+            padding: 14px 18px; 
+            text-decoration: none; 
+            text-align: center; 
+        } 
+        .horizontal-nav a:hover { 
+            background-color: #111111; 
+        } 
+        .horizontal-nav a.active { 
+            background-color: maroon; 
+        } 
+        .horizontal-nav li { 
+            border-right: 1px solid #777777; 
+        } 
+        .horizontal-nav li:last-child { 
+            border-right: none; 
+        }
+    </style>
+</head>
+<body>
+    <header> 
+        <h1>My TechPro Website</h1> 
+        <p>Practicing CSS Navigation Bars</p> 
+    </header> 
+    <main> 
+        <h2>Welcome!</h2> 
+        <p>This page will contain a vertical and a horizontal navigation bar.</p> 
+    </main>
+    <nav class="vertical-nav" aria-label="Horizontal navigation">
+        <ul>
+            <li><a class="active" href="#home">home</a></li>
+            <li><a href="#lessons">Lessons</a></li> 
+            <li><a href="#projects">Projects</a></li> 
+            <li><a href="#about">About</a></li>
+        </ul>
+        <section id="home"> 
+            <h2>Home</h2> 
+            <p>Welcome to our TechPro learning page.</p> 
+        </section> 
+        <section id="lessons"> 
+            <h2>Lessons</h2> 
+            <p>We practice HTML and CSS in Visual Studio Code.</p> 
+        </section> 
+        <section id="projects"> 
+            <h2>Projects</h2> 
+            <p>We create simple webpages and design activities.</p> 
+        </section> 
+        <section id="about"> 
+            <h2>About</h2>
+            <p>This page is a CSS navigation practice activity.</p> 
+        </section> 
+
+    </nav>
+</body>
+</html>

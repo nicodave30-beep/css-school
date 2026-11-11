@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_Links_Activity</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; line-height: 1.6; } 
+        h1{ color: maroon;}
+        p{ color: maroon;}
+        div{
+            padding: 3px;
+            margin: 20px;
+        }
+
+        h1 { color: maroon; } 
+        a:link { color: maroon; } 
+        a:visited { color: purple; } 
+        a:hover { color: white; background-color: maroon; } 
+        a:active { color: gold; } 
+
+       .button:link, .button:visited{
+        background-color: maroon;
+        color: white;
+        border: 5px solid maroon;
+        border-radius: 6px;
+        padding: 12px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+       }
+       .button:hover, .button:active{
+        background-color: white;
+        color: maroon;
+       }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>TechPro Learning Links</h1>
+        <p>Welcome to Nico Dave E. Santiago Learning Journey! Where does he learn, and what does his teacher use to teach him?</p>
+        <p><a href="https://www.w3schools.com/css/default.asp">This is where the teach us to teach us about CSS </a></p>
+        <p><a class="button" href="https://www.w3schools.com/css/css_link.asp">There where we learn about CSS link and how it work</a></p>
+        <p><a class="button" href="https://www.w3schools.com/css/default.asp">This is Basic of CSS</a></p>
+        <p><a class="button" href="https://www.w3schools.com">This is the Website</a></p>
+
+    </div>
+</body>
+</html>

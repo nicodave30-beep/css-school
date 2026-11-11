@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            background: #f7f3f4; 
+            color: #222; 
+        } 
+        header { 
+            padding: 24px; 
+            background: maroon; 
+            color: white; 
+        } 
+        main {
+             padding: 24px;
+        } 
+
+        nav ul{
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 200px;
+            background-color: #eeeeee;
+        }
+
+        li a {
+            display: block;
+            color:  #222222;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        /* Change the link and background color on hover */
+        li a:hover:not(.active){
+        background-color: #555555;
+        color: white;
+        }
+        .active{
+            background-color: maroon;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header> 
+        <h1>My TechPro Website</h1> 
+        <p>Practicing CSS Navigation Bars</p> 
+    </header> 
+    <main> 
+        <h2>Welcome!</h2> 
+        <p>This page will contain a vertical and a horizontal navigation bar.</p> 
+    </main>
+    <nav>
+        <ul>
+            <li><a class="active" href="#home">home</a></li>
+            <li><a href="#lessons">Lessons</a></li> 
+            <li><a href="#projects">Projects</a></li> 
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
