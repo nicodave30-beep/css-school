@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechPro Learning Hub</title>
+  <style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #292329;
+  background: #f2f2f2;
+}
+
+.page-grid {
+  display: block;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header,
+.navigation,
+.main-content,
+.sidebar,
+.footer {
+  padding: 20px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+}
+
+
+.course-grid {
+  display: block;
+}
+
+.course {
+  padding: 24px 16px;
+  margin-bottom: 12px;
+  background: #ffffff;
+  border: 1px solid #7a1835;
+  border-radius: 8px;
+}
+
+
+@supports (display: grid) {
+  
+  .page-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-rows: auto auto 1fr auto;
+    gap: 16px; 
+    justify-content: center;
+    align-content: start;
+    justify-items: stretch;
+    align-items: stretch;
+    grid-template-areas:
+      "header header header header header header header header header header header header"
+      "nav    nav    nav    nav    nav    nav    nav    nav    nav    nav    nav    nav"
+      "main   main   main   main   main   main   main   main   side   side   side   side"
+      "footer footer footer footer footer footer footer footer footer footer footer footer";
+  }
+
+  
+  .header {
+    grid-area: header;
+  }
+
+  .navigation {
+    grid-area: nav;
+  }
+
+  .main-content {
+    grid-area: main;
+    min-width: 0;
+  }
+
+  .sidebar {
+    grid-area: side;
+  }
+
+  .footer {
+    grid-area: footer;
+  }
+
+  
+  .course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: auto auto;
+    row-gap: 14px;
+    column-gap: 14px;
+    justify-content: space-evenly;
+    align-content: start;
+    justify-items: stretch;
+    align-items: stretch;
+  }
+
+  
+  .featured {
+    grid-column: span 2;
+  }
+
+  .course:nth-child(4) {
+    grid-row: span 2;
+  }
+
+  
+  .course:nth-child(6) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
+  
+  .course:nth-child(2) {
+    justify-self: stretch;
+    align-self: center;
+  }
+
+  
+  .course:nth-child(1) { order: 1; }
+  .course:nth-child(2) { order: 2; }
+  .course:nth-child(3) { order: 3; }
+  .course:nth-child(4) { order: 4; }
+  .course:nth-child(5) { order: 5; }
+  .course:nth-child(6) { order: 6; }
+}
+
+
+@media (max-width: 600px) {
+  @supports (display: grid) {
+    .page-grid {
+      grid-template-areas:
+        "header header header header header header header header header header header header"
+        "nav    nav    nav    nav    nav    nav    nav    nav    nav    nav    nav    nav"
+        "main   main   main   main   main   main   main   main   main   main   main   main"
+        "side   side   side   side   side   side   side   side   side   side   side   side"
+        "footer footer footer footer footer footer footer footer footer footer footer footer";
+    }
+
+    .course-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .featured {
+      grid-column: span 2;
+    }
+
+    .course:nth-child(4) {
+      grid-row: auto;
+    }
+
+    .course:nth-child(6) {
+      grid-column: auto;
+    }
+  }
+}
+
+
+
+.header {
+  color: #ffffff;
+  background: #7a1835;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  color: #a84a65;
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 0.12em;
+}
+
+.header .eyebrow {
+  color: #f5dce4;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: clamp(1.5rem, 4vw, 2.3rem);
+}
+
+.header-subtitle {
+  margin: 6px 0 0;
+  color: #f5dce4;
+}
+
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px;
+  background: #ffffff;
+}
+
+.navigation a {
+  color: #7a1835;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navigation a:hover,
+.navigation a:focus {
+  text-decoration: underline;
+}
+
+.main-content,
+.sidebar {
+  background: #ffffff;
+}
+
+.section-heading h2,
+.sidebar h2,
+.project-panel h2 {
+  margin: 0 0 8px;
+  color: #7a1835;
+}
+
+.section-heading > p:last-child {
+  margin-top: 0;
+  color: #625b5e;
+}
+
+.course {
+  min-height: 150px;
+  color: #292329;
+  background: #f7eef1;
+  border: 1px solid #7a1835;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.course h3 {
+  margin: 6px 0;
+  color: #7a1835;
+  font-size: 1.2rem;
+}
+
+.course p {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.course-number {
+  color: #a84a65;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.project-panel {
+  margin-top: 22px;
+  padding: 18px;
+  background: #f2f2f2;
+  border-left: 5px solid #7a1835;
+  border-radius: 6px;
+}
+
+.project-panel p {
+  margin-bottom: 0;
+}
+
+.sidebar {
+  border: 1px solid #e4d7dc;
+}
+
+.sidebar > p {
+  color: #625b5e;
+}
+
+.sidebar-note {
+  margin-top: 22px;
+  padding: 14px;
+  background: #f7eef1;
+  border-radius: 7px;
+}
+
+.sidebar-note strong {
+  color: #7a1835;
+}
+
+.sidebar-note p {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+.footer {
+  color: #ffffff;
+  background: #4b1022;
+  text-align: center;
+}
+
+.footer p {
+  margin: 3px;
+}
+
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .header,
+  .navigation,
+  .main-content,
+  .sidebar,
+  .footer {
+    padding: 15px;
+  }
+
+  .navigation {
+    gap: 12px;
+  }
+
+  .course {
+    min-height: 130px;
+    padding: 16px 12px;
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="page-grid">
+    <header class="header">
+      <p class="eyebrow">GRADE 11 • TECHPRO</p>
+      <h1>TECHPRO LEARNING HUB</h1>
+      <p class="header-subtitle">Build skills. Create projects. Keep learning.</p>
+    </header>
+
+    <nav class="navigation" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#courses">Courses</a>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <main class="main-content" id="home">
+      <section id="courses">
+        <div class="section-heading">
+          <p class="eyebrow">LEARN SOMETHING NEW</p>
+          <h2>Explore ICT Courses</h2>
+          <p>Choose a course and start building your technology skills.</p>
+        </div>
+
+        <div class="course-grid">
+          <article class="course featured">
+            <span class="course-number">01</span>
+            <h3>HTML</h3>
+            <p>Build the structure of web pages.</p>
+          </article>
+
+          <article class="course">
+            <span class="course-number">02</span>
+            <h3>CSS</h3>
+            <p>Style pages and create layouts.</p>
+          </article>
+
+          <article class="course">
+            <span class="course-number">03</span>
+            <h3>JavaScript</h3>
+            <p>Add interaction to websites.</p>
+          </article>
+
+          <article class="course">
+            <span class="course-number">04</span>
+            <h3>Java</h3>
+            <p>Learn object-oriented programming.</p>
+          </article>
+
+          <article class="course">
+            <span class="course-number">05</span>
+            <h3>Python</h3>
+            <p>Write clear and useful programs.</p>
+          </article>
+
+          <article class="course">
+            <span class="course-number">06</span>
+            <h3>Database</h3>
+            <p>Organize and manage information.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="project-panel" id="projects">
+        <h2>Challenge Project</h2>
+        <p>Create a responsive learning dashboard using HTML and CSS Grid.</p>
+      </section>
+    </main>
+
+    <aside class="sidebar" id="about">
+      <div>
+        <p class="eyebrow">STAY UPDATED</p>
+        <h2>Announcements</h2>
+      </div>
+      <p>Complete your CSS Grid activity and test your page on a phone-sized screen.</p>
+      <div class="sidebar-note">
+        <strong>Activity reminder</strong>
+        <p>Save both <code>index.html</code> and <code>style.css</code> in the same folder.</p>
+      </div>
+    </aside>
+
+    <footer class="footer">
+      <p>Quirino High School • TechPro Department</p>
+      <p>Learn by building.</p>
+    </footer>
+  </div>
+</body>
+</html>
