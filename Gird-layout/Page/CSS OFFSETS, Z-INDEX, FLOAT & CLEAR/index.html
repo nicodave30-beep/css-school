@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS OFFSETS, Z-INDEX, FLOAT & CLEAR</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #6b1024;
+            color: white;
+            padding: 18px;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        h2 {
+            color: #6b1024;
+        }
+
+        .demo {
+            padding: 12px;
+            margin: 12px 0;
+            border: 2px solid #6b1024;
+            background: #f8e9ed;
+        }
+
+        /* Relative positioning */
+        .offset-box {
+            position: relative;
+            left: 25px;
+            top: 10px;
+        }
+
+        /* Featured card */
+        .feature-card {
+            position: relative;
+            padding: 20px;
+            margin: 25px 0;
+            background: #f8e9ed;
+            border: 2px solid #6b1024;
+        }
+
+        .featured-label {
+            position: absolute;
+            top: -12px;
+            right: 15px;
+            background: #6b1024;
+            color: white;
+            padding: 3px 10px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        /* Overlapping cards */
+        .layer-area {
+            position: relative;
+            height: 200px;
+            margin: 20px 0;
+        }
+
+        .layer-one {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            width: 150px;
+            height: 90px;
+            background: #f2c6cf;
+            z-index: 1;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .layer-two {
+            position: absolute;
+            left: 70px;
+            top: 40px;
+            width: 150px;
+            height: 90px;
+            background: #e5b45d;
+            z-index: 2;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .layer-three {
+            position: absolute;
+            left: 130px;
+            top: 70px;
+            width: 150px;
+            height: 90px;
+            background: #b9d9c5;
+            z-index: 3;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        /* Float photo */
+        .photo-placeholder {
+            float: left;
+            width: 110px;
+            height: 90px;
+            margin: 0 14px 8px 0;
+            background: #f2c6cf;
+            border: 2px solid #6b1024;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .article {
+            border: 1px solid #aaa;
+            padding: 12px;
+        }
+
+        /* Clear the float */
+        .after-float {
+            clear: both;
+            margin-top: 16px;
+            padding: 10px;
+            background: #e7edf7;
+        }
+
+        /* Clearfix */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>CSS OFFSETS, Z-INDEX, FLOAT & CLEAR</h1>
+    </header>
+
+    <main>
+
+        <h2>Offsets and Layers</h2>
+
+        <div class="demo">Box A</div>
+        <div class="demo offset-box">Box B</div>
+        <div class="demo">Box C</div>
+
+        <section class="feature-card">
+            <span class="featured-label">FEATURED</span>
+            <h2>Technology in Education</h2>
+            <p>
+                School technology helps students research information,
+                create presentations, learn computer skills, and
+                collaborate on classroom projects.
+            </p>
+        </section>
+
+        <h2>Overlapping Information Cards</h2>
+
+        <div class="layer-area">
+            <div class="layer-one">
+                <strong>Card One</strong>
+                <p>Computer Skills</p>
+            </div>
+
+            <div class="layer-two">
+                <strong>Card Two</strong>
+                <p>Online Learning</p>
+            </div>
+
+            <div class="layer-three">
+                <strong>Card Three</strong>
+                <p>Digital Safety</p>
+            </div>
+        </div>
+
+        <h2>Float and Clear</h2>
+
+        <div class="article clearfix">
+
+            <div class="photo-placeholder">PHOTO</div>
+
+            <p>
+                Students participate in school technology activities
+                by using computers, educational websites, and digital
+                tools. These activities help them develop their
+                creativity and problem-solving skills.
+            </p>
+
+            <p>
+                Students also learn how to create documents, prepare
+                presentations, work together, and use the internet
+                responsibly.
+            </p>
+
+        </div>
+
+        <div class="after-float">
+            <strong>Next Section:</strong>
+            This section begins below the floated photo and article.
+        </div>
+
+    </main>
+
+</body>
+</html>

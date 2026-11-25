@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Gradients Activity</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+            padding: 24px;
+            background-color: #f5f5f5;
+            color: #222;
+        }
+        h1{color: maroon;}
+        .demo{
+            min-height: 120px;
+            padding: 20px;
+            margin: 14px 0;
+            border-radius: 12px;
+            color: #222;
+            background: linear-gradient( to right, maroon, pink);
+        }
+        .line{
+            min-height: 120px;
+            padding: 20px;
+            margin: 14px 0;
+            border-radius: 12px;
+            color: #222;
+            background: linear-gradient(to bottom, navy, skyblue);
+        }
+        .lime{
+            min-height: 120px;
+            padding: 20px;
+            margin: 14px 0;
+            border-radius: 12px;
+            color: #222;
+            background: linear-gradient(45deg, orange, gold); 
+        }
+        .dime{
+            min-height: 120px;
+            padding: 20px;
+            margin: 14px 0;
+            border-radius: 12px;
+            color: #222;
+            background: linear-gradient(to right, maroon, white, gold); 
+        }
+        .radial-demo { 
+            min-height: 150px; 
+            padding: 20px; 
+            margin: 14px 0; 
+            border-radius: 12px; 
+            background: radial-gradient(circle, white, maroon); 
+        }
+        .po{
+            min-height: 150px; 
+            padding: 20px; 
+            margin: 14px 0; 
+            border-radius: 12px; 
+            background: radial-gradient(circle, yellow, orange, red); 
+        }
+        .poo{
+            min-height: 150px; 
+            padding: 20px; 
+            margin: 14px 0; 
+            border-radius: 12px; 
+            background: radial-gradient(ellipse at top left, white, teal); 
+        }
+        .pond{
+            min-height: 150px; 
+            padding: 20px; 
+            margin: 14px 0; 
+            border-radius: 12px; 
+            background: radial-gradient(circle at center, gold 10%, maroon 70%);
+        }
+        .conic-demo { 
+            width: 180px; 
+            height: 180px; 
+            margin: 18px auto; 
+            border-radius: 50%; 
+            background: conic-gradient(red, yellow, lime, aqua, blue, magenta, red); 
+        }
+        .card{
+            padding: 22px; 
+            margin: 16px 0; 
+            border-radius: 14px; 
+            min-height: 90px; 
+        }
+        .linear-card { background: linear-gradient(120deg, #800020, #f4c2c2); } 
+        .radial-card { background: radial-gradient(circle, #fff4cc, #d97706); } 
+        .conic-card { background: conic-gradient(from 45deg, #800020, #f4c2c2, #f5c542, #800020); } 
+    </style>
+</head>
+<body>
+    <h1>My CSS Gradients Activity</h1> 
+    <p>Gradients blend colors to make webpages more engaging.</p> 
+    <div class="demo">My first gradient will go here.</div> 
+    <div class="radial-demo">
+        <h1>Linear Gradients </h1>
+        <P class="line">to bottom, navy, skyblue</P>
+        <p class="lime">45deg, orange, gold</p>
+        <p class="dime">to right, maroon, white, gold</p>
+    </div>
+    <div class="radial-demo">
+        <h1>Radial Gradients</h1>
+        <p class="po">circle, yellow, orange, red</p>
+        <p class="poo">ellipse at top left, white, teal</p>
+        <p class="pond">circle at center, gold 10%, maroon 70%</p>
+    </div>
+    <div>
+    <h1>Conic Gradients </h1>
+    <p>A conic gradient rotates color transitions around a center point. It can create a color-wheel effect. </p>
+    <div class="conic-demo"></div>
+    </div>
+    <div class="radial-demo">
+        <h1>Compare the Three Gradient Types</h1>
+        <section class="card linear-card"> 
+            <h2>Linear Gradient</h2> 
+            <p>Color changes along a straight line.</p> 
+        </section> 
+        <section class="card radial-card"> 
+            <h2>Radial Gradient</h2> 
+            <p>Color spreads outward from a center point.</p> 
+        </section> 
+        <section class="card conic-card"> 
+            <h2>Conic Gradient</h2> 
+            <p>Color changes around a center point.</p> 
+        </section> 
+    </div>
+</body>
+</html>
+
+
+

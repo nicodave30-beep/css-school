@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 24px; 
+            background: #f7f3f4; 
+            color: #222; 
+        } 
+        h1, h2 { color: maroon; } 
+
+        ul.circle-list { list-style-type: circle; } 
+        ul.square-list { list-style-type: square; } 
+        ol.roman-list { list-style-type: upper-roman; } 
+        ol.alpha-list { list-style-type: lower-alpha; }
+        
+        ul.outside-list { list-style-position: outside; } 
+        ul.inside-list { list-style-position: inside; } 
+
+        ul.image-list { 
+            list-style-image: url(images/background.jpg); 
+            list-style-type: square; 
+        }
+
+        ul.tech-list { 
+            list-style: square inside; 
+        }
+        
+        ul.tech-list { 
+            list-style: square inside; 
+            background: #f2dce2; 
+            padding: 20px; 
+        } 
+        ul.tech-list-li { 
+            background: #ffffff; 
+            color: #5b0018; 
+            padding: 8px; 
+            margin: 6px 0; 
+        } 
+</style> 
+</head>
+<body>
+    <h1>My CSS Lists Activity</h1> 
+    <p>HTML lists organize information. CSS changes how list markers and items look.</p> 
+    <h2>My Favorite ICT Topics</h2> 
+    <ul> 
+        <li>Web Design</li> 
+        <li>Computer Hardware</li> 
+        <li>Programming</li> 
+    </ul>
+    <h2>Steps to Start a Web Project</h2> 
+    <ol> 
+        <li>Create a project folder.</li> 
+        <li>Open the folder in Visual Studio Code.</li> 
+        <li>Create index.html.</li> 
+        <li>Save and preview the page.</li> 
+    </ol> 
+    <h2>Marker Examples</h2> 
+    <ul class="circle-list"><li>Circle marker</li><li>Circle marker</li></ul> 
+    <ul class="square-list"><li>Square marker</li><li>Square marker</li></ul> 
+    <ol class="roman-list"><li>Roman numeral</li><li>Roman numeral</li></ol> 
+    <ol class="alpha-list"><li>Lowercase letter</li><li>Lowercase letter</li></ol>
+
+    <ul class="outside-list"> 
+        <li>This is a longer list item that may wrap onto another line so you can compare marker placement.</li> 
+    </ul> 
+    <ul class="inside-list"> 
+        <li>This is a longer list item that may wrap onto another line so you can compare marker placement.</li> 
+    </ul> 
+    <ul class="image-list">
+        <li>hello</li>
+    </ul>
+    <ul class="tech-list">
+        <li>Ni Hao Ma </li>
+    </ul>
+    <Ul class="tech-list-li">
+        <li>hola</li>
+    </Ul>
+</body>
+</html>
