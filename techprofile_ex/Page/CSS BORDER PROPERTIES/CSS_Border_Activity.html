@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Border Activity</title>
+    <style>
+        body{
+            background-attachment: scroll;
+        }
+        p{
+            border-style: solid;
+            border-width: 5px;
+            border-color:goldenrod;
+            text-align: center;
+            padding: 6px;
+            border-radius: 10px;
+        }
+        h1 {
+            border-top: 5px solid red;
+            border-right: 5px dashed blue;
+            border-bottom: 8px double green;
+            border-left: 3px dotted purple;
+            text-align: center;
+            padding: 6px;
+            border-radius: 10px;
+        }
+        .box{
+            border-top: 5px solid red;
+            border-right: 5px dashed blue;
+            border-bottom: 8px double green;
+            border-left: 3px dotted purple;
+            text-align: center;
+            padding: 6px;
+            border-radius: 10px;
+        }
+        #para2{
+           border-style: solid; 
+           border-width: 2px 4px 8px 10px; 
+           text-align: center;
+           border-color: lightgreen;
+           padding: 6px;
+           border-radius: 10px;
+        }
+        #para3{
+            border: 3px solid #800080;
+            border-radius: 10px;
+            text-align: center;
+            padding: 6px;
+        }
+        .circle{
+            width: 150px;
+            height: 150px;
+            border: 20px solid lightseagreen;
+            border-radius: 50%;
+            padding: 6px;
+        }
+        .profile{
+            border-style: solid;
+            border-width: 5px;
+            border-color: #A06D2C;
+            border-top: 5px solid #A06D2C;
+            border-bottom: 5px solid #A06D2C;
+            border-left: 5px solid #A06D2C;
+            border-right: 5px solid #A06D2C;
+            border: 5px solid #A06D2C;
+            border-radius: 8px;
+            background-color:#F4E7D7;
+            padding: 5px;
+
+        }
+        .back1{
+            border-style: solid;
+            border-width: 5px;
+            border-color: #A06D2C;
+            border-top: 5px solid #A06D2C;
+            border-bottom: 5px solid #A06D2C;
+            border-left: 5px solid #A06D2C;
+            border-right: 5px solid #A06D2C;
+            border: 5px solid #A06D2C;
+            border-radius: 8px;
+            background-color:#F4E7D7;
+            padding: 5px;
+        }
+        .solidline{
+            border-style: solid;
+            border-color: chocolate;
+        }
+        .dottedline{
+            border-style: dotted;
+            border-color: blue;
+        }
+        .dashedline{
+            border-style: dashed;
+            border-color: aquamarine
+        }
+        .doubleline{
+            border-style: double;
+            border-color: coral;
+        }
+        .grooveline{
+            border-style: groove;
+            border-color: cornflowerblue;
+        }
+        .ridgeline{
+            border-style: ridge;
+            border-color: blueviolet;
+        }
+        .insetline{
+            border-style: inset;
+            border-color:crimson;
+        }
+        .outsetline{
+            border-style: outset;
+            border-color: cornsilk;
+        }
+        .noneline{
+            border-style: none;
+            border-color:darkolivegreen;
+        }
+        .Red{
+            border-color: red;
+        }
+        .Blue{
+            border-color: blue;
+        }
+        .Green{
+            border-color: green ;
+        }
+        .Purple{
+            border-color: purple;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1 class="back1">CSS Border Activity</h1>
+    <div class="back1">
+        <p>Learning CSS borders using Visual Studio Code.</p>
+    
+        <h2><center style="color:#D3A05F;"> BORDER STYLE</center></h2>
+        <p class="solidline"> solid</p>
+        <p class="dottedline">dotted</p>
+        <p class="dashedline">dashed</p>
+        <p class="doubleline">double</p>
+        <p class="grooveline">groove</p>
+        <p class="ridgeline">ridge</p>
+        <p class="insetline">inset</p>
+        <p class="outset">outset</p>
+        <p class="noneline">none</p>
+ 
+        <h2><center style="color:#D3A05F;">DIFFERENT WIDTHS FOR EACH SIDE </center></h2>
+        <p id="para2">BORDER WIDTH </p>
+
+        <h2><center style="color:#D3A05F;">BORDER COLOR </center></h2>
+        <p class="Red">Red</p>
+        <p class="Blue">Blue</p>
+        <p class="Green">Green</p>
+        <p class="Purple">Purple</p>
+    </div>
+    <p id="para3">ROUNDED BORDERS</p>
+    <p class="circle">CREATE A CIRCLE </p>
+    <div class="profile">
+        <h2 style="font-family: monospace; color: #D3A05F;"> <center>TECHPRO PROFILE</center></h2>
+        <pre style="color: #D3A05F;">Name: Nico Dave E Santiago</pre>
+        <pre style="color: #D3A05F;">Section: 11-Bell</pre>
+        <pre style="color: #D3A05F;">Favorite technolog: Laptop</pre>
+        <pre style="color: #D3A05F;">Favorite programming language: GDScript</pre>
+        <pre style="color: #D3A05F;">Dream Career: Game developer </pre>
+    </div>
+</body>
+</html>
